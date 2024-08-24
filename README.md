@@ -2,28 +2,28 @@
 
 This project implements a Flappy Bird-like game where the bird's behavior is controlled by a neural network optimized using the NEAT (NeuroEvolution of Augmenting Topologies) algorithm. The goal is to evolve neural networks to maximize the bird's survival time and score in the game.
 
-Project Overview:
+## Project Overview:
 
     Game Engine: Pygame (game development framework).
     AI Algorithm: NEAT (NeuroEvolution of Augmenting Topologies)
     Game Objective: Evolve a neural network to guide the bird through an endless series of pipes.
 
-Files:
+## Files:
 
     main.py: The main script that runs the game and NEAT algorithm.
     imgs/: Directory containing images used in the game (bird sprites, pipes, background, base).
     neat.txt: NEAT configuration file.
     best_genome.pkl: File where the best genome is saved after training.
 
-Game Description:
+## Game Description:
 
     In this Flappy Bird game, the bird's goal is to navigate through pipes by jumping at appropriate times. 
     The game's logic and AI training are handled by NEAT, which evolves a population of neural networks to 
     improve their performance over generations.
 
-Key Components:
+## Key Components:
 
-Classes
+### Classes
 
     Bird:
         Attributes:
@@ -52,7 +52,7 @@ Classes
             move(): Moves the base to create a scrolling effect.
             draw(win): Draws the base on the screen.
 
-Functions:
+### Functions:
 
     draw_window(win, birds, pipes, base, score, gen)
         Draws all game components (birds, pipes, base) on the screen along with the score and generation number.
@@ -69,27 +69,25 @@ Functions:
     run_with_winner(winner, config)
         Runs a simulation with the best genome found, allowing visualization of the evolved neural network's performance.
 
-Pickle Module Usage:
+## Pickle Module Usage:
 
-    Saving the Best Genome: After the NEAT algorithm completes training, the best genome is saved to a file named best_genome.pkl using the pickle module and the game restarts by itself using this genome. This allows you to persist the best-performing neural network across different runs.
+    Saving the Best Genome: After the NEAT algorithm completes training, the best genome is saved to a file named best_genome.pkl using the pickle module. This allows you to persist the best-performing neural network across different runs.
 
-Setup and Usage:
+## Setup and Usage:
 
-    Install Dependencies.
-    Ensure you have Python 3 installed.
-    Install required libraries by typing: pip install pygame neat-python (in the console)
+    Install Dependencies:
+        Ensure you have Python 3 installed.
+        Install required libraries by typing: pip install pygame neat-python (in the console)
 
-Run the Game and Training:
+    Run the Game and Training:
+        Ensure the imgs directory contains the necessary image files.
+        Run the main script by typing (in the console):
+            python main.py
 
-    Ensure the imgs directory contains the necessary image files.
-    
-    Run the main script typing (in the console):
-        python main.py
-
-    NEAT Configuration
+    NEAT Configuration:
         Modify neat.txt to adjust NEAT parameters like population size, mutation rates, etc.
 
-NEAT Configuration:
+## NEAT Configuration:
 
 The NEAT configuration file neat.txt contains parameters for:
 
@@ -99,7 +97,7 @@ The NEAT configuration file neat.txt contains parameters for:
     Crossover rates
     Fitness evaluation
 
-Visualize the Best Genome:
+## Visualize the Best Genome:
 
     After training, the best genome can be visualized by running the simulation with the best genome. Type in the console:
     
@@ -107,7 +105,7 @@ Visualize the Best Genome:
       winner = pickle.load(f)
     run_with_winner(winner, config)
 
-Notes:
+## Notes:
 
     Ensure that the image files are correctly placed in the imgs directory to avoid missing assets.
     The game will run for up to 50 generations or until a bird reaches a score of 50.
