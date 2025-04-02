@@ -1,6 +1,6 @@
 # Flappy Bird AI with NEAT
 
-This project implements a Flappy Bird-like game where the bird's behavior is controlled by a neural network optimized using the NEAT (NeuroEvolution of Augmenting Topologies) algorithm. The goal is to evolve neural networks to maximize the bird's survival time and score in the game.
+This project recreates a Flappy Bird-style game where the bird's movements are controlled by an AI-driven neural network, trained and optimized using the NEAT (NeuroEvolution of Augmenting Topologies) algorithm. The objective is to evolve increasingly intelligent agents through generations of genetic selection, improving their ability to navigate obstacles and maximize survival time. By simulating natural selection—rewarding high-performing neural networks and mutating successful traits—the system autonomously develops optimal strategies for gameplay. This project demonstrates the application of neuroevolution in game AI.
 
 ## Project Overview:
 - **Game Engine:** Pygame (game development framework)
